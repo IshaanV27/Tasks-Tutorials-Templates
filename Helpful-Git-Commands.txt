@@ -11,8 +11,10 @@ git config --get remote.origin.url
 THIS AVOIDS LONG COMMIT AND PULL MESSAGES
 esc :wq
 
+
 REMOVE/DELETE FILE
 git rm <filename> <filename2> <etc>
+
 
 REMOVE/DELETE a folder
 git rm -r folder-name
@@ -20,8 +22,19 @@ git rm -r folder-name
 git commit -m "Remove duplicated directory"
 git push origin master
 
+
 ADD FILE
 git add <filename>
+
+
+RESETTING YOUR CHANGES BACK TO THE MASTER
+git checkout
+
+
+IN CASE YOU MADE CHANGES THAT YOU WANT TO GET RID OF SO YOU CAN DO A CLEAN GIT PULL
+git stash allows you to reset your changes so you can git pull without
+any conflict. Then you can git stash clear to memove your list of stashes
+https://git-scm.com/docs/git-stash
 
 
 MAKING BRANCHES
@@ -35,10 +48,6 @@ http://stackoverflow.com/questions/3876977/update-git-branches-from-master
 update branch from master
 git fetch
 git rebase origin/master
-
-
-KEEPING A FORKED REPOSITORY UP TO DATE WITH THE MASTER
-https://gist.github.com/CristinaSolana/1885435
 
 
 MERGE BRANCH WITH MASTER
@@ -69,11 +78,8 @@ REMOTELY (on the repository) -- you should probably only do this to branches you
 git push origin --delete <branchname>
 
 
-Updating forks from origianl repositories
-https://youtu.be/TsUIRtT80QU
-https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository
-https://help.github.com/articles/fork-a-repo/
-https://yangsu.github.io/pull-request-tutorial/
+KEEPING A FORKED REPOSITORY UP TO DATE WITH THE MASTER
+https://gist.github.com/CristinaSolana/1885435
 
 
 Github and Markdown
@@ -93,3 +99,4 @@ git tag -a v1.0.0 -m "message here"
 git tag
 //to push tags to online repo
 git push --tags
+
